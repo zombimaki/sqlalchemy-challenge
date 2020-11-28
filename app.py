@@ -54,11 +54,11 @@ def home():
 
 ##########################################################################################################
 # precipitation route
-## Convert the query results to a dictionary using `date` as the key and `prcp` as the value.
+# Returns a JSON list of date and prcp
 ##########################################################################################################
 @app.route("/api/v1.0/precipitation")
 def precipitation():
-    """Convert the query results to a dictionary using `date` as the key and `prcp` as the value."""
+
     session = Session(engine)
 
     prcp_query =   session.query(Measurement.date, Measurement.prcp).\
@@ -77,7 +77,7 @@ def precipitation():
 
 ##########################################################################################################    
 # station route 
-## Return a JSON list of stations from the datase
+## Return a JSON list of stations from the database
 ##########################################################################################################
 @app.route("/api/v1.0/stations")
 def stations():
@@ -101,7 +101,7 @@ def stations():
 
 ##########################################################################################################
 # tobs route
-## Query the dates and temperature observations of the most active station for the last year of data.
+## Returns date and temperature observations of the most active station for the last year of data.
 ##########################################################################################################
 @app.route("/api/v1.0/tobs")
 def tobs():    

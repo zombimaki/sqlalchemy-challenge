@@ -2,7 +2,8 @@
 
 The SQLalchemy challenge was completed by developing a juputer notebook for the climate analysis and a flask python application for the api.
 
-The climate.ipynb jupyter notebook performs the following:
+The climate.ipynb jupyter notebook performs the following:<br>
+
 1. Connects to the hawaii.sqlite file found in the Resources folder.
 2. Reflects the hawaii.sqlite database 
 3. Returns the table names in the database
@@ -23,3 +24,20 @@ The climate.ipynb jupyter notebook performs the following:
 18. Creates a dataframe of the daily normals.
 19. Plots the daily normals as an area plot with stacked=false.
 
+The app.py Flask app does the following:
+1. Connects to the hawaii.sqlite file found in the Resources folder. 
+2. Reflects the hawaii.sqlite database 
+3. Starts the flask app
+4. Creates a route for:<br />
+	a. /<br />
+	   i. Root route which lists the api urls<br />	  
+	b. /api/v1.0/precipitation<br />
+	   ii. precipitation route which returns date and prcp<br />
+	c. /api/v1.0/stations<br />
+	   iii. stations route which returns a list of stations from the db<br />
+	d. /api/v1.0/tobs<br />
+	   iv. tobs route which returns date and temperature observations of the most active station for the last year of data.<br />
+	e. /api/v1.0/start<br />
+	   v. start route calculate `TMIN`, `TAVG`, and `TMAX` for all dates >= to the start date
+	f. /api/v1.0/start/end<br />
+	   vi. start/end route calculates `TMIN`, `TAVG`, and `TMAX` for dates between start & end date<br />
