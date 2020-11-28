@@ -38,6 +38,6 @@ The app.py Flask app does the following:
 	d. /api/v1.0/tobs<br />
 	   iv. tobs route which returns date and temperature observations of the most active station for the last year of data.<br />
 	e. /api/v1.0/start<br />
-	   v. start route calculate `TMIN`, `TAVG`, and `TMAX` for all dates >= to the start date
+	   v. start route calculate `TMIN`, `TAVG`, and `TMAX` for all dates >= to the start date<br />	
 	f. /api/v1.0/start/end<br />
 	   vi. start/end route calculates `TMIN`, `TAVG`, and `TMAX` for dates between start & end date<br />
